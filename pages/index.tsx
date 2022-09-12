@@ -3,28 +3,8 @@ import illustration from "../public/illustration.png";
 import styles from "../styles/home.module.scss";
 import Navigation from "../components/Navigation";
 import Head from 'next/head'
-import Script from 'next/script'
 
 export default function Home() {
-
-  const initializeAuthX = () => {
-    // @ts-ignore
-    const authx = AuthX("Wn9PZ3NcYMWRlWyf78Aovdok95vahmE3Sp6Js1Tp", {
-      redirect_uri: "https://authx-app-ismailomodara.vercel.app/redirect",
-      locale: 'en',
-      isSpa: true,
-      onComplete: (session, message) => {
-        console.log('logged in ', session, message)
-        console.log('Session = ', authx.getSession())
-      },
-      onError: function (error) {
-        alert(error.message)
-      }
-    })
-
-    window["authx"] = authx
-  }
-
   const signup = () => {
     window["authx"].initiateSession()
   }
@@ -34,13 +14,6 @@ export default function Home() {
       <Head>
         <title>Get Chat</title>
       </Head>
-      <>
-        <Script
-          id="authx"
-          src="https://ajs.radius.africa/authx.js"
-          onLoad={initializeAuthX}
-        />
-      </>
       <Navigation name="" />
       <div className={styles['home']}>
         <div className={styles['home-content']}>

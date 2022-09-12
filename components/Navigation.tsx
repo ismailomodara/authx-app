@@ -9,17 +9,15 @@ interface NavigationInterface {
 }
 
 const Navigation: NextPage<NavigationInterface> = ({ name }) => {
+  const router = useRouter();
+
   const login = () => {
     window["authx"].initiateSession()
   }
 
   const logout = () => {
     window["authx"].logout()
-  }
-
-  const redirect = () => {
-    const router = useRouter();
-    router.push("/redirect")
+    router.push("/")
   }
 
   return (
