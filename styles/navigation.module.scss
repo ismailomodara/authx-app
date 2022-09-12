@@ -1,0 +1,53 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: transparent;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 10px 20px;
+      position: relative;
+
+      a {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+
+  > span {
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    background: #fff;
+  }
+
+  p {
+    font-size: 1.125rem;
+    margin-left: 5px;
+    margin-right: 20px;
+  }
+}
