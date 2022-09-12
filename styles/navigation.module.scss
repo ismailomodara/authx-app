@@ -17,6 +17,10 @@
     margin: 0;
     padding: 0;
 
+    @media(max-width: 600px) {
+      display: none;
+    }
+
     li {
       padding: 10px 20px;
       position: relative;
@@ -31,6 +35,10 @@
         text-decoration: none;
       }
     }
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 20px;
   }
 }
 
@@ -49,5 +57,11 @@
     font-size: 1.125rem;
     margin-left: 5px;
     margin-right: 20px;
+  }
+
+  @media (max-width: 600px) {
+    span, p {
+      display: none;
+    }
   }
 }

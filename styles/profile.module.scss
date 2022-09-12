@@ -1,5 +1,4 @@
 .profile {
-  padding: 0 120px;
   height: 100%;
   width: 100%;
   display: flex;
@@ -9,16 +8,29 @@
     img {
       height: 400px !important;
       width: auto !important;
+
+      @media (max-width: 600px) {
+        height: 200px !important;
+      }
     }
   }
 
   &-content {
     h1 {
       font-size: 5rem !important;
+
+      @media (max-width: 600px) {
+        font-size: 3rem !important;
+      }
     }
 
     p {
       font-size: 1.5rem;
     }
+  }
+
+  @media (max-width: 600px) {
+    justify-content: center;
+    flex-direction: column;
   }
 }

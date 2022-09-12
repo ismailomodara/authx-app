@@ -9,6 +9,10 @@
   &-content {
     max-width: 50%;
 
+    @media (max-width: 600px) {
+      max-width: 100%;
+    }
+
     h1 {
       font-size: 4rem;
       line-height: 1.1;
@@ -30,6 +34,10 @@
     img {
       height: 700px !important;
       width: auto !important;
+    }
+
+    @media (max-width: 600px) {
+      display: none;
     }
   }
 }
