@@ -7,7 +7,6 @@ import Script from 'next/script'
 
 export default function Home() {
   const initializeAuthX = () => {
-    console.log('Sushi')
     const authx = AuthX("Wn9PZ3NcYMWRlWyf78Aovdok95vahmE3Sp6Js1Tp", {
       redirect_uri: "https://getchat-io.vercel.app/redirect",
       locale: 'en',
@@ -25,7 +24,7 @@ export default function Home() {
   }
 
   const login = () => {
-    authx.initiateSession()
+    window["authx"].initiateSession()
   }
 
   return (
@@ -46,12 +45,10 @@ export default function Home() {
           <h1>Chat Easy: <br />a new way to chat.</h1>
           <p>The simplest, easiest and fastest way to send notifications with yours customers in real-time.
             Communicate with customers without delay.</p>
-          <div className="actions">
-            <button className="button button-pr" onClick={login}>Let's get started</button>
-          </div>
+          <button className="button button-pr" onClick={login}>Let get started</button>
         </div>
         <div className={styles['home-image']}>
-          <Image src={illustration} />
+          <Image src={illustration} alt="Image" />
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ export default function Profile() {
       <Navigation name={profile.name} />
       <div className={styles.profile}>
         <div className={styles['profile-image']}>
-          <Image src={profileAv} />
+          <Image src={profileAv} alt="Image" />
         </div>
         <div className={styles["profile-content"]}>
           <h1>Welcome home,</h1>
