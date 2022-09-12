@@ -4,9 +4,13 @@ import styles from "../styles/home.module.scss";
 import Navigation from "../components/Navigation";
 import Head from 'next/head'
 import Script from 'next/script'
+import { useState } from 'react'
 
 export default function Home() {
+  const [authx, setAuthX] = useState(null)
+
   const initializeAuthX = () => {
+    // @ts-ignore
     const authx = AuthX("Wn9PZ3NcYMWRlWyf78Aovdok95vahmE3Sp6Js1Tp", {
       redirect_uri: "https://getchat-io.vercel.app/redirect",
       locale: 'en',
