@@ -12,7 +12,7 @@ export default function Home() {
   const initializeAuthX = () => {
     // @ts-ignore
     const authx = AuthX("Wn9PZ3NcYMWRlWyf78Aovdok95vahmE3Sp6Js1Tp", {
-      redirect_uri: "https://getchat-io.vercel.app/redirect",
+      redirect_uri: "https://authx-app-ismailomodara.vercel.app/redirect",
       locale: 'en',
       isSpa: true,
       onComplete: (session, message) => {
