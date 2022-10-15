@@ -25,7 +25,7 @@ export default function AuthXWidget() {
     <>
       <Script
         id="authx"
-        src="https://ajs.radius.africa/authx.js"
+        src="https://staging-ajs.radius.africa/authx.js"
         onLoad={initializeAuthX}
       />
     </>
