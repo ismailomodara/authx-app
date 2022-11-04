@@ -11,15 +11,6 @@ interface NavigationInterface {
 const Navigation: NextPage<NavigationInterface> = ({ name }) => {
   const router = useRouter();
 
-  const login = () => {
-    window["authx"].initiateSession()
-  }
-
-  const logout = () => {
-    window["authx"].logout()
-    router.push("/")
-  }
-
   return (
     <div className={styles.navigation}>
       <Link href="/">
@@ -36,10 +27,10 @@ const Navigation: NextPage<NavigationInterface> = ({ name }) => {
             <div className={styles.user}>
               <span></span>
               <p>{name}</p>
-              <button className="button button-pr button-sm" onClick={logout}>Logout</button>
+              <button className="button button-pr button-sm">Logout</button>
             </div>
             :
-            <button className="button button-wh" onClick={login}>Continue to dashboard</button>
+            <button className="button button-wh">Continue to dashboard</button>
         }
       </div>
 

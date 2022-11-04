@@ -5,10 +5,6 @@ import Navigation from "../components/Navigation";
 import Head from 'next/head'
 
 export default function Home() {
-  const signup = () => {
-    window["authx"].initiateSession()
-  }
-
   return (
     <div>
       <Head>
@@ -20,7 +16,7 @@ export default function Home() {
           <h1>Chat Easy: <br />a new way to chat.</h1>
           <p>The simplest, easiest and fastest way to send notifications with yours customers in real-time.
             Communicate with customers without delay.</p>
-          <button className="button button-pr" onClick={signup}>Let get started</button>
+          <button className="button button-pr">Let get started</button>
         </div>
         <div className={styles['home-image']}>
           <Image src={illustration} alt="Image" />
